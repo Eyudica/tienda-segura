@@ -10,7 +10,8 @@ jobs:
   verificar:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # actions/checkout@v4.1.7
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
         with:
           fetch-depth: 0
 
@@ -24,6 +25,7 @@ jobs:
 
       - run: semgrep scan --config auto --error
 
-      - uses: gitleaks/gitleaks-action@v2
+      # gitleaks/gitleaks-action@v2.3.4
+      - uses: gitleaks/gitleaks-action@47f07094b9bc2a02e6d62a93c990b7956ef5a5b1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
