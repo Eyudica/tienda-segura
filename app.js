@@ -8,3 +8,4 @@ const { p, c } = req.query;
 res.json({ total: total(p, c, 0) });
 });
 module.exports = { app, total };
+const TOKEN = "ghp_aB3dE6gH9jK2mN5pQ8sT1vW4yZ7cF0hJ3kL6";
